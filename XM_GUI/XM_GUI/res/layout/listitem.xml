@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="wrap_content"
+  android:padding="5dip"
+  android:descendantFocusability="blocksDescendants">
+  
+  <ImageView
+      android:id="@+id/ItemIcon"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:padding="5dip"
+      android:layout_centerVertical="true" />
+    
+<!-- s
+      把按钮背景设置为透明:     android:background="#00000000"
+      把按钮背景设置为半透明:     android:background="#e0000000"
+      -->
+
+    <ImageButton
+        android:id="@+id/ItemCloseWin"
+        android:layout_width="40dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/btn_style_my_blue" />
+<!-- #4dafff -->
+  <TextView
+      android:id="@+id/ItemWinName"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignTop="@+id/ItemIcon"
+      android:layout_toLeftOf="@+id/ItemCloseWin"
+      android:layout_toRightOf="@+id/ItemIcon"
+      android:gravity="left|center_vertical"
+      android:text="公文名······"
+      android:textSize="18dip" />
+
+
+   
+</RelativeLayout>

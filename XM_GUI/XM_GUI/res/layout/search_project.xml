@@ -1,0 +1,1011 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#eee"
+    android:orientation="vertical" 
+    android:gravity="center_horizontal">
+    
+        <RelativeLayout 
+        android:id="@+id/login_top_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/title_bar">	
+      	<Button
+            android:id="@+id/search_project_back"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+                 android:visibility="gone"
+            android:text="返回"
+            android:textSize="14sp"
+            android:textColor="#fff"
+            android:onClick="login_back"
+            android:background="@drawable/title_btn_back"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#ffffff"
+            android:text="工程信息查询"
+           />
+	</RelativeLayout>
+    
+    <RelativeLayout
+        	android:id="@+id/relative0"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/login_top_layout"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/search_bar_bg" >
+        
+		<Button
+		    android:id="@+id/proj_search_bt"
+		      android:layout_width="60sp"
+		    android:layout_height="15sp"
+		    android:layout_alignBottom="@+id/proj_search_text"
+		    android:layout_alignParentRight="true"
+		    android:layout_alignTop="@+id/proj_search_text"
+		    android:background="@drawable/btn_icon_search"
+		    android:text="@string/search_button" />
+      
+		<EditText
+            android:id="@+id/proj_search_text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/proj_search_bt"
+            android:background="@drawable/login_editbox"
+            android:ems="10"
+            android:hint="@string/proj_search_hint"
+            android:singleLine="true"
+            android:textColor="#000"
+            android:textSize="15sp"
+			 >
+
+            <requestFocus />
+        </EditText>
+	
+</RelativeLayout>
+		
+	<ScrollView
+	    
+    	android:layout_width="fill_parent" 
+    	android:layout_height="wrap_content"
+    	android:layout_below="@id/relative0"
+    	android:scrollbars="vertical">
+
+	
+	<RelativeLayout
+	    android:id="@+id/relative1"
+		android:orientation="vertical" 
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center_vertical" 
+		android:layout_marginTop="10dp"
+	 	android:visibility="invisible"
+		>
+		
+<!-- android:visibility="invisible" -->
+	    		
+	    <RelativeLayout
+		    android:id="@+id/relative11"
+			android:orientation="horizontal" 
+			android:layout_width="fill_parent"
+			android:layout_height="40dp"
+			android:gravity="center_vertical" 
+		>
+            
+	        <LinearLayout
+	            android:id="@+id/linear11"
+	            android:orientation="horizontal" 
+				android:layout_width="fill_parent"
+				android:layout_height="fill_parent"
+				android:gravity="center_vertical" >
+			
+	            <LinearLayout
+		            android:orientation="horizontal" 
+					android:layout_width="0dp"
+					android:layout_height="fill_parent"
+					android:gravity="center_vertical" 
+					android:layout_weight="1">
+					
+	                <RelativeLayout 
+	                    android:id="@+id/relative111"
+	                    android:layout_width="fill_parent"
+	                    android:layout_height="fill_parent"
+	                    android:gravity="center_vertical" 
+	                    >
+	                    
+	                    <TextView 
+					        android:id="@+id/project_name" 
+					        android:gravity="center_vertical" 
+					        android:layout_width="wrap_content"   
+					        android:layout_height="30dp"
+					        android:layout_marginLeft="5dp"
+					        android:text="@string/project_name"         
+				    	/>  
+		    
+		    
+		    			<TextView
+					        android:id="@+id/name_text"
+					        android:background="@drawable/project_textview"
+					        android:layout_marginLeft="5dp"
+					        android:gravity="center_vertical"
+					        android:layout_height="26dp"
+					        android:layout_width="wrap_content"
+					        android:layout_toRightOf="@id/project_name"
+					        android:layout_alignParentRight="true"
+					        android:text="12345"
+						/>   
+	                </RelativeLayout>    
+				</LinearLayout>
+				
+	            <LinearLayout
+		            android:orientation="horizontal" 
+					android:layout_width="0dp"
+					android:layout_height="fill_parent"
+					android:layout_weight="1">
+	                
+	                <RelativeLayout 
+	                    android:id="@+id/relative112"
+	                    android:layout_width="fill_parent"
+	                    android:layout_height="fill_parent"
+	                    android:gravity="center_vertical" 
+	                    >
+	                    
+	                    <TextView 
+					        android:id="@+id/project_status" 
+					        android:gravity="center_vertical" 
+					        android:layout_width="wrap_content"   
+					        android:layout_height="30dp"
+					        android:layout_marginLeft="5dp"
+					        android:text="@string/project_status"         
+				    	/>  
+		    
+		    
+		    			<TextView
+					        android:id="@+id/status_text"
+					        android:background="@drawable/project_textview"
+					        android:layout_marginLeft="5dp"
+					        android:layout_marginRight="5dp"
+					        android:gravity="center_vertical"
+					        android:layout_height="26dp"
+					        android:layout_width="wrap_content"
+					        android:layout_toRightOf="@id/project_status"
+					        android:layout_alignParentRight="true"
+					        android:text="12345"
+						/>   
+	                </RelativeLayout>   
+	                
+	                
+	                
+				</LinearLayout>
+	            
+	       </LinearLayout>
+	       
+
+	        
+		</RelativeLayout> 
+	    
+	    <RelativeLayout
+		    android:id="@+id/relative_view11"
+		    android:layout_below="@id/relative11"
+			android:orientation="horizontal" 
+			android:layout_width="fill_parent"
+			android:layout_height="2dp"
+			android:gravity="center_vertical" >
+	        
+		    <View
+			   android:layout_width="fill_parent"  
+			   android:layout_height="fill_parent"
+			   android:background="?android:attr/listDivider"  
+			/>
+		</RelativeLayout>
+		
+	    <RelativeLayout
+		    android:id="@+id/relative12"
+		    android:layout_below="@id/relative_view11"
+			android:orientation="horizontal" 
+			android:layout_width="fill_parent"
+			android:layout_height="40dp"
+			android:layout_marginTop="5dp"
+			android:gravity="center_vertical" 
+		>
+            
+	        <LinearLayout
+	            android:orientation="horizontal" 
+				android:layout_width="fill_parent"
+				android:layout_height="fill_parent">
+			
+	            <LinearLayout
+		            android:orientation="horizontal" 
+					android:layout_width="0dp"
+					android:layout_height="fill_parent"
+					android:layout_weight="1">
+					
+	                <RelativeLayout 
+	                    android:id="@+id/relative121"
+	                    android:layout_width="fill_parent"
+	                    android:layout_height="fill_parent"
+	                    android:gravity="center_vertical" 
+	                    >
+	                    
+	                    <TextView 
+					        android:id="@+id/project_region" 
+					        android:gravity="center_vertical" 
+					        android:layout_width="wrap_content"   
+					        android:layout_height="30dp"
+					        android:layout_marginLeft="5dp"
+					        android:text="项目资金："         
+				    	/>  
+		    
+		    
+		    			<TextView
+					        android:id="@+id/fund_text"
+					        android:background="@drawable/project_textview"
+					        android:layout_marginLeft="5dp"
+					        android:gravity="center_vertical"
+					        android:layout_height="26dp"
+					        android:layout_width="wrap_content"
+					        android:layout_toRightOf="@id/project_region"
+					        android:layout_alignParentRight="true"
+					        android:text="12345"
+						/>   
+	                </RelativeLayout>    
+				</LinearLayout>
+				
+	            <LinearLayout
+		            android:orientation="horizontal" 
+					android:layout_width="0dp"
+					android:layout_height="fill_parent"
+					android:layout_weight="1">
+	                
+	                <RelativeLayout 
+	                    android:id="@+id/relative122"
+	                    android:layout_width="fill_parent"
+	                    android:layout_height="fill_parent"
+	                    android:gravity="center_vertical" 
+	                    >
+	                    
+	                    <TextView 
+					        android:id="@+id/project_department" 
+					        android:gravity="center_vertical" 
+					        android:layout_width="wrap_content"   
+					        android:layout_height="30dp"
+					        android:layout_marginLeft="5dp"
+					        android:text="@string/project_department"         
+				    	/>  
+		    
+		    
+		    			<TextView
+					        android:id="@+id/department_text"
+					        android:background="@drawable/project_textview"
+					        android:layout_marginLeft="5dp"
+					        android:layout_marginRight="5dp"
+					        android:gravity="center_vertical"
+					        android:layout_height="26dp"
+					        android:layout_width="wrap_content"
+					        android:layout_toRightOf="@id/project_department"
+					        android:layout_alignParentRight="true"
+					        android:text="12345"
+						/>   
+	                </RelativeLayout>   
+	                
+	                
+	                
+				</LinearLayout>
+	            
+	       </LinearLayout>
+		</RelativeLayout>
+	    
+	    <RelativeLayout
+		    android:id="@+id/relative_view12"
+		    android:layout_below="@id/relative12"
+			android:orientation="horizontal" 
+			android:layout_width="fill_parent"
+			android:layout_height="2dp"
+			android:gravity="center_vertical" >
+	        
+		    <View
+			   android:layout_width="fill_parent"  
+			   android:layout_height="fill_parent"
+			   android:background="?android:attr/listDivider"  
+			/>
+		</RelativeLayout>
+	    
+	    
+	    <RelativeLayout
+		    android:id="@+id/relative13"
+		    android:layout_marginTop="5dp"
+		    android:layout_below="@id/relative_view12"
+			android:orientation="horizontal" 
+			android:layout_width="fill_parent"
+			android:layout_height="40dp"
+			android:gravity="center_vertical" 
+		>
+            
+	        <LinearLayout
+	            android:orientation="horizontal" 
+				android:layout_width="fill_parent"
+				android:layout_height="fill_parent">
+			
+	            <LinearLayout
+		            android:orientation="horizontal" 
+					android:layout_width="0dp"
+					android:layout_height="fill_parent"
+					android:layout_weight="1">
+					
+	                <RelativeLayout 
+	                    android:id="@+id/relative131"
+	                    android:layout_width="fill_parent"
+	                    android:layout_height="fill_parent"
+	                    android:gravity="center_vertical" 
+	                    >
+	                    
+	                    <TextView 
+					        android:id="@+id/project_plan" 
+					        android:gravity="center_vertical" 
+					        android:layout_width="wrap_content"   
+					        android:layout_height="30dp"
+					        android:layout_marginLeft="5dp"
+					        android:text="@string/project_plan"         
+				    	/>  
+		    
+		    
+		    			<TextView
+					        android:id="@+id/plan_text"
+					        android:background="@drawable/project_textview"
+					        android:layout_marginLeft="5dp"
+					        android:gravity="center_vertical"
+					        android:layout_height="26dp"
+					        android:layout_width="wrap_content"
+					        android:layout_toRightOf="@id/project_plan"
+					        android:layout_alignParentRight="true"
+					        android:text="12345"
+						/>   
+	                </RelativeLayout>    
+				</LinearLayout>
+				
+	            <LinearLayout
+		            android:orientation="horizontal" 
+					android:layout_width="0dp"
+					android:layout_height="fill_parent"
+					android:layout_weight="1">
+	                
+	                <RelativeLayout 
+	                    android:id="@+id/relative132"
+	                    android:layout_width="fill_parent"
+	                    android:layout_height="fill_parent"
+	                    android:gravity="center_vertical" 
+	                    >
+	                    
+	                    <TextView 
+					        android:id="@+id/project_real" 
+					        android:gravity="center_vertical" 
+					        android:layout_width="wrap_content"   
+					        android:layout_height="30dp"
+					        android:layout_marginLeft="5dp"
+					        android:text="@string/project_real"         
+				    	/>  
+		    
+		    
+		    			<TextView
+					        android:id="@+id/real_text"
+					        android:background="@drawable/project_textview"
+					        android:layout_marginLeft="5dp"
+					        android:layout_marginRight="5dp"
+					        android:gravity="center_vertical"
+					        android:layout_height="26dp"
+					        android:layout_width="wrap_content"
+					        android:layout_toRightOf="@id/project_real"
+					        android:layout_alignParentRight="true"
+					        android:text="12345"
+						/>   
+	                </RelativeLayout>   
+	                
+	                
+	                
+				</LinearLayout>
+	            
+	       </LinearLayout>
+		</RelativeLayout>
+	    
+	    <RelativeLayout
+		    android:id="@+id/relative_view13"
+		    android:layout_below="@id/relative13"
+			android:orientation="horizontal" 
+			android:layout_width="fill_parent"
+			android:layout_height="2dp"
+			android:gravity="center_vertical" >
+	        
+		    <View
+			   android:layout_width="fill_parent"  
+			   android:layout_height="fill_parent"
+			   android:background="?android:attr/listDivider"  
+			/>
+		</RelativeLayout>
+		
+	    <RelativeLayout
+		    android:id="@+id/relative14"
+		    android:layout_marginTop="5dp"
+		    android:layout_below="@id/relative_view13"
+			android:orientation="horizontal" 
+			android:layout_width="fill_parent"
+			android:layout_height="40dp"
+			android:gravity="center_vertical" 
+		>
+            
+	        <LinearLayout
+	            android:orientation="horizontal" 
+				android:layout_width="fill_parent"
+				android:layout_height="fill_parent">
+			
+	            <LinearLayout
+		            android:orientation="horizontal" 
+					android:layout_width="0dp"
+					android:layout_height="fill_parent"
+					android:layout_weight="1">
+					
+	                <RelativeLayout 
+	                    android:id="@+id/relative131"
+	                    android:layout_width="fill_parent"
+	                    android:layout_height="fill_parent"
+	                    android:gravity="center_vertical" 
+	                    >
+	                    
+	                    <TextView 
+					        android:id="@+id/project_where" 
+					        android:gravity="center_vertical" 
+					        android:layout_width="wrap_content"   
+					        android:layout_height="30dp"
+					        android:layout_marginLeft="5dp"
+					        android:text="所属区县："         
+				    	/>  
+		    
+		    
+		    			<TextView
+					        android:id="@+id/where_text"
+					        android:background="@drawable/project_textview"
+					        android:layout_marginLeft="5dp"
+					        android:gravity="center_vertical"
+					        android:layout_height="26dp"
+					        android:layout_width="wrap_content"
+					        android:layout_toRightOf="@id/project_where"
+					        android:layout_alignParentRight="true"
+					        android:text="12345"
+						/>   
+	                </RelativeLayout>    
+				</LinearLayout>
+				
+	            <LinearLayout
+		            android:orientation="horizontal" 
+					android:layout_width="0dp"
+					android:layout_height="fill_parent"
+					android:layout_weight="1">
+	                
+	                <RelativeLayout 
+	                    android:id="@+id/relative132"
+	                    android:layout_width="fill_parent"
+	                    android:layout_height="fill_parent"
+	                    android:gravity="center_vertical" 
+	                    >
+	                    
+	                    <TextView 
+					        android:id="@+id/project_property" 
+					        android:gravity="center_vertical" 
+					        android:layout_width="wrap_content"   
+					        android:layout_height="30dp"
+					        android:layout_marginLeft="5dp"
+					        android:text="@string/project_property"         
+				    	/>  
+		    
+		    
+		    			<TextView
+					        android:id="@+id/property_text"
+					        android:background="@drawable/project_textview"
+					        android:layout_marginLeft="5dp"
+					        android:layout_marginRight="5dp"
+					        android:gravity="center_vertical"
+					        android:layout_height="26dp"
+					        android:layout_width="wrap_content"
+					        android:layout_toRightOf="@id/project_property"
+					        android:layout_alignParentRight="true"
+					        android:text="12345"
+						/>   
+	                </RelativeLayout>   
+	                
+	                
+	                
+				</LinearLayout>
+	            
+	       </LinearLayout>
+		</RelativeLayout>
+	    
+	    <RelativeLayout
+		    android:id="@+id/relative_view14"
+		    android:layout_below="@id/relative14"
+			android:orientation="horizontal" 
+			android:layout_width="fill_parent"
+			android:layout_height="2dp"
+			android:gravity="center_vertical" >
+	        
+		    <View
+			   android:layout_width="fill_parent"  
+			   android:layout_height="fill_parent"
+			   android:background="?android:attr/listDivider"  
+			/>
+		</RelativeLayout>
+		
+	    
+	    <RelativeLayout
+		    android:id="@+id/relative15"
+		    android:layout_marginTop="5dp"
+		    android:layout_below="@id/relative_view14"
+			android:orientation="horizontal" 
+			android:layout_width="fill_parent"
+			android:layout_height="40dp"
+			android:gravity="center_vertical" 
+		>
+            
+	        <LinearLayout
+	            android:orientation="horizontal" 
+				android:layout_width="fill_parent"
+				android:layout_height="fill_parent">
+			
+	            <LinearLayout
+		            android:orientation="horizontal" 
+					android:layout_width="0dp"
+					android:layout_height="fill_parent"
+					android:layout_weight="1">
+					
+	                <RelativeLayout 
+	                    android:id="@+id/relative131"
+	                    android:layout_width="fill_parent"
+	                    android:layout_height="fill_parent"
+	                    android:gravity="center_vertical" 
+	                    >
+	                    
+	                    <TextView 
+					        android:id="@+id/project_where" 
+					        android:gravity="center_vertical" 
+					        android:layout_width="wrap_content"   
+					        android:layout_height="30dp"
+					        android:layout_marginLeft="5dp"
+					        android:text="廉租房数："         
+				    	/>  
+		    
+		    
+		    			<TextView
+					        android:id="@+id/lian_text"
+					        android:background="@drawable/project_textview"
+					        android:layout_marginLeft="5dp"
+					        android:gravity="center_vertical"
+					        android:layout_height="26dp"
+					        android:layout_width="wrap_content"
+					        android:layout_toRightOf="@id/project_where"
+					        android:layout_alignParentRight="true"
+					        android:text="12345"
+						/>   
+	                </RelativeLayout>    
+				</LinearLayout>
+				
+	            <LinearLayout
+		            android:orientation="horizontal" 
+					android:layout_width="0dp"
+					android:layout_height="fill_parent"
+					android:layout_weight="1">
+	                
+	                <RelativeLayout 
+	                    android:id="@+id/relative132"
+	                    android:layout_width="fill_parent"
+	                    android:layout_height="fill_parent"
+	                    android:gravity="center_vertical" 
+	                    >
+	                    
+	                    <TextView 
+					        android:id="@+id/project_property" 
+					        android:gravity="center_vertical" 
+					        android:layout_width="wrap_content"   
+					        android:layout_height="30dp"
+					        android:layout_marginLeft="5dp"
+					        android:text="公租房数："         
+				    	/>  
+		    
+		    
+		    			<TextView
+					        android:id="@+id/gong_text"
+					        android:background="@drawable/project_textview"
+					        android:layout_marginLeft="5dp"
+					        android:layout_marginRight="5dp"
+					        android:gravity="center_vertical"
+					        android:layout_height="26dp"
+					        android:layout_width="wrap_content"
+					        android:layout_toRightOf="@id/project_property"
+					        android:layout_alignParentRight="true"
+					        android:text="12345"
+						/>   
+	                </RelativeLayout>   
+	                
+	                
+	                
+				</LinearLayout>
+	            
+	       </LinearLayout>
+		</RelativeLayout>
+	    
+	   	<RelativeLayout
+		    android:id="@+id/relative_view15"
+		    android:layout_below="@id/relative15"
+			android:orientation="horizontal" 
+			android:layout_width="fill_parent"
+			android:layout_height="2dp"
+			android:gravity="center_vertical" >
+	        
+		    <View
+			   android:layout_width="fill_parent"  
+			   android:layout_height="fill_parent"
+			   android:background="?android:attr/listDivider"  
+			/>
+		</RelativeLayout>
+		
+	    
+	    <RelativeLayout
+		    android:id="@+id/relative16"
+		    android:layout_marginTop="5dp"
+		    android:layout_below="@id/relative_view15"
+			android:orientation="horizontal" 
+			android:layout_width="fill_parent"
+			android:layout_height="40dp"
+			android:gravity="center_vertical" 
+		>
+            
+	        <LinearLayout
+	            android:orientation="horizontal" 
+				android:layout_width="fill_parent"
+				android:layout_height="fill_parent">
+			
+	            <LinearLayout
+		            android:orientation="horizontal" 
+					android:layout_width="0dp"
+					android:layout_height="fill_parent"
+					android:layout_weight="1">
+					
+	                <RelativeLayout 
+	                    android:id="@+id/relative161"
+	                    android:layout_width="fill_parent"
+	                    android:layout_height="fill_parent"
+	                    android:gravity="center_vertical" 
+	                    >
+	                    
+	                    <TextView 
+					        android:id="@+id/project_wher" 
+					        android:gravity="center_vertical" 
+					        android:layout_width="wrap_content"   
+					        android:layout_height="30dp"
+					        android:layout_marginLeft="5dp"
+					        android:text="经适房数："         
+				    	/>  
+		    
+		    
+		    			<TextView
+					        android:id="@+id/jingshi_text"
+					        android:background="@drawable/project_textview"
+					        android:layout_marginLeft="5dp"
+					        android:gravity="center_vertical"
+					        android:layout_height="26dp"
+					        android:layout_width="wrap_content"
+					        android:layout_toRightOf="@id/project_wher"
+					        android:layout_alignParentRight="true"
+					        android:text="12345"
+						/>   
+	                </RelativeLayout>    
+				</LinearLayout>
+				
+	            <LinearLayout
+		            android:orientation="horizontal" 
+					android:layout_width="0dp"
+					android:layout_height="fill_parent"
+					android:layout_weight="1">
+	                
+	                <RelativeLayout 
+	                    android:id="@+id/relative132"
+	                    android:layout_width="fill_parent"
+	                    android:layout_height="fill_parent"
+	                    android:gravity="center_vertical" 
+	                    >
+	                    
+	                    <TextView 
+					        android:id="@+id/project_property" 
+					        android:gravity="center_vertical" 
+					        android:layout_width="wrap_content"   
+					        android:layout_height="30dp"
+					        android:layout_marginLeft="5dp"
+					        android:text="棚户区数："         
+				    	/>  
+		    
+		    
+		    			<TextView
+					        android:id="@+id/peng_text"
+					        android:background="@drawable/project_textview"
+					        android:layout_marginLeft="5dp"
+					        android:layout_marginRight="5dp"
+					        android:gravity="center_vertical"
+					        android:layout_height="26dp"
+					        android:layout_width="wrap_content"
+					        android:layout_toRightOf="@id/project_property"
+					        android:layout_alignParentRight="true"
+					        android:text="12345"
+						/>   
+	                </RelativeLayout>   
+	                
+	                
+	                
+				</LinearLayout>
+	            
+	       </LinearLayout>
+		</RelativeLayout>
+		
+	    
+	   <RelativeLayout
+		    android:id="@+id/relative_view16"
+		    android:layout_below="@id/relative16"
+			android:orientation="horizontal" 
+			android:layout_width="fill_parent"
+			android:layout_height="2dp"
+			android:gravity="center_vertical" >
+	        
+		    <View
+			   android:layout_width="fill_parent"  
+			   android:layout_height="fill_parent"
+			   android:background="?android:attr/listDivider"  
+			/>
+		</RelativeLayout>
+		
+	    
+	    <RelativeLayout
+		    android:id="@+id/relative17"
+		    android:layout_marginTop="5dp"
+		    android:layout_below="@id/relative_view16"
+			android:orientation="horizontal" 
+			android:layout_width="fill_parent"
+			android:layout_height="40dp"
+			android:gravity="center_vertical" 
+		>
+
+					
+	        <RelativeLayout 
+	             	android:id="@+id/relative131"
+	                android:layout_width="fill_parent"
+	                android:layout_height="fill_parent"
+	                android:gravity="center_vertical" 
+	       	>
+	                    
+	                    <TextView 
+					        android:id="@+id/project_where" 
+					        android:gravity="center_vertical" 
+					        android:layout_width="wrap_content"   
+					        android:layout_height="30dp"
+					        android:layout_marginLeft="5dp"
+					        android:text="计划建筑面积："         
+				    	/>  
+		    
+		    
+		    			<TextView
+					        android:id="@+id/plan_area"
+					        android:background="@drawable/project_textview"
+					        android:layout_marginLeft="5dp"
+					        android:gravity="center_vertical"
+					        android:layout_height="26dp"
+					        android:layout_width="wrap_content"
+					        android:layout_toRightOf="@id/project_where"
+					        android:layout_alignParentRight="true"
+					        android:layout_marginRight="5dp"
+					        android:text="12345"
+						/>   
+	                </RelativeLayout>    
+				
+		</RelativeLayout>
+		
+	    
+	  	<RelativeLayout
+		    android:id="@+id/relative_view17"
+		    android:layout_below="@id/relative17"
+			android:orientation="horizontal" 
+			android:layout_width="fill_parent"
+			android:layout_height="2dp"
+			android:gravity="center_vertical" >
+	        
+		    <View
+			   android:layout_width="fill_parent"  
+			   android:layout_height="fill_parent"
+			   android:background="?android:attr/listDivider"  
+			/>
+		</RelativeLayout>
+		
+	    
+	    <RelativeLayout
+		    android:id="@+id/relative18"
+		    android:layout_marginTop="5dp"
+		    android:layout_below="@id/relative_view17"
+			android:orientation="horizontal" 
+			android:layout_width="fill_parent"
+			android:layout_height="40dp"
+			android:gravity="center_vertical" 
+		>
+
+					
+	        <RelativeLayout 
+	             	android:id="@+id/relative131"
+	                android:layout_width="fill_parent"
+	                android:layout_height="fill_parent"
+	                android:gravity="center_vertical" 
+	       	>
+	                    
+	                    <TextView 
+					        android:id="@+id/project_where" 
+					        android:gravity="center_vertical" 
+					        android:layout_width="wrap_content"   
+					        android:layout_height="30dp"
+					        android:layout_marginLeft="5dp"
+					        android:text="规划审批面积："         
+				    	/>  
+		    
+		    
+		    			<TextView
+					        android:id="@+id/approved_area"
+					        android:background="@drawable/project_textview"
+					        android:layout_marginLeft="5dp"
+					        android:gravity="center_vertical"
+					        android:layout_height="26dp"
+					        android:layout_width="wrap_content"
+					        android:layout_toRightOf="@id/project_where"
+					        android:layout_alignParentRight="true"
+					        android:layout_marginRight="5dp"
+					        android:text="12345"
+						/>   
+	                </RelativeLayout>    
+				
+		</RelativeLayout>
+		
+	    
+	    <RelativeLayout
+		    android:id="@+id/relative_view18"
+		    android:layout_below="@id/relative18"
+			android:orientation="horizontal" 
+			android:layout_width="fill_parent"
+			android:layout_height="2dp"
+			android:gravity="center_vertical" >
+	        
+		    <View
+			   android:layout_width="fill_parent"  
+			   android:layout_height="fill_parent"
+			   android:background="?android:attr/listDivider"  
+			/>
+		</RelativeLayout>
+		
+	    
+	    <RelativeLayout
+		    android:id="@+id/relative19"
+		    android:layout_marginTop="5dp"
+		    android:layout_below="@id/relative_view18"
+			android:orientation="horizontal" 
+			android:layout_width="fill_parent"
+			android:layout_height="40dp"
+			android:gravity="center_vertical" 
+		>
+
+					
+	        <RelativeLayout 
+	             	android:id="@+id/relative131"
+	                android:layout_width="fill_parent"
+	                android:layout_height="fill_parent"
+	                android:gravity="center_vertical" 
+	       	>
+	                    
+	                    <TextView 
+					        android:id="@+id/project_where" 
+					        android:gravity="center_vertical" 
+					        android:layout_width="wrap_content"   
+					        android:layout_height="30dp"
+					        android:layout_marginLeft="5dp"
+					        android:text="竣工实测面积："         
+				    	/>  
+		    
+		    
+		    			<TextView
+					        android:id="@+id/real_area"
+					        android:background="@drawable/project_textview"
+					        android:layout_marginLeft="5dp"
+					        android:gravity="center_vertical"
+					        android:layout_height="26dp"
+					        android:layout_width="wrap_content"
+					        android:layout_toRightOf="@id/project_where"
+					        android:layout_alignParentRight="true"
+					        android:layout_marginRight="5dp"
+					        android:text="12345"
+						/>   
+	                </RelativeLayout>    
+				
+		</RelativeLayout>
+		
+	    <RelativeLayout
+		    android:id="@+id/relative_view19"
+		    android:layout_below="@id/relative19"
+			android:orientation="horizontal" 
+			android:layout_width="fill_parent"
+			android:layout_height="2dp"
+			android:gravity="center_vertical" >
+	        
+		    <View
+			   android:layout_width="fill_parent"  
+			   android:layout_height="fill_parent"
+			   android:background="?android:attr/listDivider"  
+			/>
+		</RelativeLayout>
+		
+	    
+	    <RelativeLayout
+		    android:id="@+id/relative20"
+		    android:layout_marginTop="5dp"
+		    android:layout_below="@id/relative_view19"
+			android:orientation="horizontal" 
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:gravity="center_vertical" 
+		>
+
+					
+	        <RelativeLayout 
+	             	android:id="@+id/relative131"
+	                android:layout_width="fill_parent"
+	                android:layout_height="fill_parent"
+	                android:gravity="center_vertical" 
+	       	>
+	                    
+	                    <TextView 
+					        android:id="@+id/project_where" 
+					        android:gravity="center_vertical" 
+					        android:layout_width="wrap_content"   
+					        android:layout_height="30dp"
+					        android:layout_marginLeft="5dp"
+					        android:text="项目详细介绍："         
+				    	/>  
+		    
+		    
+		    			<TextView
+					        android:id="@+id/project_introduction"
+					        android:background="@drawable/project_textview"
+					        android:layout_marginLeft="5dp"
+					        android:gravity="center_vertical"
+					        android:layout_height="wrap_content"
+					        android:layout_width="100dp"
+					        android:layout_toRightOf="@id/project_where"
+					        android:layout_alignParentRight="true"
+					        android:layout_marginRight="5dp"
+					        android:singleLine="false"
+							android:ellipsize="end"					        
+						/>   
+	                </RelativeLayout>    
+				
+		</RelativeLayout>
+	    
+	    
+  
+	</RelativeLayout>
+	    
+	    
+	</ScrollView>	
+		
+    
+    
+    
+    	
+</RelativeLayout>
+
+

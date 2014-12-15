@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#eee"
+    android:orientation="vertical" 
+    android:gravity="center_horizontal">
+    
+        <RelativeLayout 
+        android:id="@+id/login_top_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/title_bar">	
+      	<Button
+            android:id="@+id/search_filejob_back"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="返回"
+            android:textSize="14sp"
+            android:textColor="#fff"
+            android:onClick="login_back"
+            android:background="@drawable/title_btn_back"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#ffffff"
+            android:text="公文任务检索"
+           />
+	</RelativeLayout>
+    
+    <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/search_bar_bg" >
+        
+		<Button
+		    android:id="@+id/filejob_search_bt"
+		    android:layout_width="60sp"
+		    android:layout_height="15sp"
+		    android:layout_alignBottom="@+id/filejob_search_text"
+		    android:layout_alignParentRight="true"
+		    android:layout_alignTop="@+id/filejob_search_text"
+		    android:background="@drawable/btn_icon_search"
+		    android:text="@string/search_button" />
+
+        <EditText
+            android:id="@+id/filejob_search_text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/filejob_search_bt"
+            android:background="@drawable/login_editbox"
+            android:ems="10"
+            android:hint="@string/file_search_hint"
+            android:singleLine="true"
+            android:textColor="#000"
+            android:textSize="15sp" >
+
+            <requestFocus />
+        </EditText>
+	
+</RelativeLayout>
+		
+	
+</LinearLayout>
+
+

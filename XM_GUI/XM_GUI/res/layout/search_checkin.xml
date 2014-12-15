@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#eee"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/login_top_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/title_bar" >
+
+        <Button
+            android:id="@+id/checkin_top_back"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@drawable/title_btn_back"
+            android:onClick="login_back"
+            android:text="返回"
+            android:textColor="#fff"
+            android:textSize="14sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="入住信息查询"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/checkin_search_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/login_top_layout"
+        android:layout_marginTop="2dp"
+        android:background="@drawable/search_bar_bg" >
+
+        <Button
+            android:id="@+id/checkin_search_bt"
+            android:layout_width="60sp"
+            android:layout_height="15sp"
+            android:layout_alignBottom="@+id/checkin_search_text"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/checkin_search_text"
+            android:background="@drawable/btn_icon_search"
+            android:text="@string/search_button" />
+
+        <EditText
+            android:id="@+id/checkin_search_text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/checkin_search_bt"
+            android:background="@drawable/login_editbox"
+            android:ems="10"
+            android:hint="@string/checkin_search_hint"
+            android:singleLine="true"
+            android:textColor="#000"
+            android:textSize="15sp" >
+
+            <requestFocus />
+        </EditText>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/checkin_radio_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/checkin_search_layout"
+        android:orientation="vertical" >
+
+        <RadioGroup
+            android:id="@+id/check_radio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:background="@drawable/top_toolbar_bg"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/radio_person"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/radio_button_style"              
+                android:tag="radio_person"
+                android:text="个人信息"
+                android:textSize="14sp" />
+
+            <RadioButton
+                android:id="@+id/radio_house"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                 style="@style/radio_button_style"
+                android:tag="radio_house"
+                android:text="房屋信息"
+                android:textSize="14sp" />
+        </RadioGroup>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/user_info"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/checkin_radio_layout"
+        android:layout_marginTop="1dp" >
+
+        <ListView
+            android:id="@+id/user_info_list"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:listSelector="@android:color/transparent"  />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/house_info"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/checkin_radio_layout"
+        android:layout_marginTop="1dp" >
+
+    
+        <ListView
+            android:id="@+id/house_info_list"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:listSelector="@android:color/transparent" />
+    </RelativeLayout>
+
+</RelativeLayout>

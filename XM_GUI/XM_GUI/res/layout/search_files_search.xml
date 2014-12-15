@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#eee"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/file_search_by_name"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/search_bar_bg" >
+
+        <Button
+            android:id="@+id/searchfile_filter"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/file_search_filter_normal"
+            android:onClick="show_search_way_dialog"
+            android:text="条件\n切换\n"
+            android:textColor="#fff"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/search_file_byname_bt"
+            android:layout_width="60sp"
+            android:layout_height="15sp"
+            android:layout_alignBottom="@+id/file_search_text"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/file_search_text"
+            android:layout_centerVertical="true"
+            android:background="@drawable/btn_style_my_blue"
+            android:text="@string/search_button" />
+
+        <EditText
+            android:id="@+id/file_search_text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/search_file_byname_bt"
+            android:layout_toRightOf="@+id/searchfile_filter"
+            android:layout_marginLeft="3sp"
+             android:layout_marginRight="3sp"
+            android:background="@drawable/login_editbox"
+            android:ems="10"
+            android:hint="@string/file_search_hint"
+            android:singleLine="true"
+            android:textColor="#000"
+            android:textSize="15sp" >
+
+            <requestFocus />
+        </EditText>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/file_search_by_time"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp" >
+
+        <Button
+            android:id="@+id/search_file_bytime_bt"
+            android:layout_width="60sp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/searchfile_filter2"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/btn_style_my_blue"
+            android:text="@string/search_button" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/search_file_bytime_bt"
+            android:layout_toRightOf="@+id/searchfile_filter2" >
+
+            <RelativeLayout
+                android:id="@+id/r1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3sp" >
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="起始时间"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/start_time"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                     android:layout_alignBottom="@+id/textView1"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp"
+                    android:layout_toRightOf="@+id/textView1"
+                     android:singleLine="true"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/r1"
+                 android:layout_marginLeft="3sp"
+                 >
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="结束时间"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/end_time"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/textView2"
+                    android:layout_alignBottom="@+id/textView2"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp"
+                    android:singleLine="true"
+                    android:textSize="16sp" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/searchfile_filter2"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/file_search_filter_normal"
+            android:onClick="show_search_way_dialog"
+            android:text="条件\n切换\n"
+            android:textColor="#fff"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/file_list"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp" >
+
+        <ListView
+            android:id="@id/android:list"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+    </RelativeLayout>
+  
+</LinearLayout>

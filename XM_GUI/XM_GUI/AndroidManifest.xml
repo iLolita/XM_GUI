@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.xm_gui"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="20" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/my_icon"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.example.start.Start_Picture"
+            android:label="昆明公有房" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.example.main.Main_View" >
+            <intent-filter>
+                <action android:name="android.intent.action.mainview" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.example.start.Login" >
+        </activity>
+        <activity android:name="com.example.main.TianQi" >
+        </activity>
+        <activity android:name="com.example.main.OA_Select" >
+        </activity>
+        <activity android:name="com.example.main.Home" >
+        </activity>
+        <activity android:name="com.example.search.searchProject"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity android:name="com.example.search.searchRecord" 
+            android:windowSoftInputMode="adjustPan">
+        </activity>
+        <activity android:name="com.example.search.searchCheckin"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity android:name="com.example.search.searchFile" >
+        </activity>
+         <activity android:name="com.example.search.searchFileSearch" >
+        </activity>
+         <activity android:name="com.example.search.fileDownloaded" >
+        </activity>
+         <activity android:name="com.example.search.fileDownloaded_withtitle" >
+        </activity>
+         
+        <activity android:name="com.example.search.searchFileflow" >
+        </activity>
+        <activity android:name="com.example.search.searchFilejob" >
+        </activity>
+        <activity android:name="com.example.search.searchFiletag" >
+        </activity>
+        <activity android:name="com.example.start.Exit" >
+        </activity>
+        <activity android:name="com.example.start.logOut" >
+        </activity>
+        <activity android:name="com.example.start.LoadingActivity" >
+        </activity>
+        <activity android:name="com.example.fileInfo.FileContent" >
+        </activity>
+        
+        <service
+            android:name="com.example.download.DownLoadService"
+            android:enabled="true" >
+            <intent-filter>
+                <action android:name="com.example.download.DownLoadService" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>

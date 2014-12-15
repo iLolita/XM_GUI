@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"     
+    >
+        <LinearLayout
+            android:id="@+id/main_exit"
+             android:layout_width="fill_parent"
+             android:layout_height="fill_parent"  
+            android:gravity="center_horizontal"
+             >
+        
+       <LinearLayout
+        	android:id="@+id/exit_layout2"
+        	android:layout_width="fill_parent"
+        	android:layout_height="wrap_content"
+        	android:gravity="center_horizontal"
+        	android:layout_gravity="bottom"
+        	android:orientation="vertical"
+        	android:background="@drawable/menu_bg" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:gravity="center"
+            android:textColor="#fff"
+            android:textSize="16sp"
+            android:text="您将退出登录\n退出程序请连续按两次返回键" />           
+            
+            <Button
+              android:id="@+id/exitBtn_y"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:text="退出登录"
+              android:textSize="18sp"
+              android:textColor="#fff"
+              android:layout_marginTop="15dp"
+              android:layout_marginLeft="10dp"
+              android:layout_marginRight="10dp"
+              android:background="@drawable/btn_style_alert_dialog_special"
+              android:gravity="center"
+			  android:onClick="exit_logouty"
+              />
+            
+            <Button
+              android:id="@+id/exitBtn_n"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="15dp"
+              android:layout_marginLeft="10dp"
+              android:layout_marginRight="10dp"
+              android:layout_marginBottom="10dp"
+              android:text="取消"
+              android:textSize="18sp"
+              android:textColor="#fff"
+              android:background="@drawable/btn_style_alert_dialog_cancel"
+              android:gravity="center"
+               android:onClick="exit_logoutn"
+              />
+           
+       </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

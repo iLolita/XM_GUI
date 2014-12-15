@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/exit_layout"
+        android:layout_width="280dp"
+        android:layout_height="180dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:background="@drawable/confirm_dialog_bg2" >
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#333"
+            android:layout_marginTop="14dp"
+            android:padding="10dp"
+            android:textSize="22sp"
+            android:gravity="center_horizontal"
+            android:text="确定退出保障性住房应用系统？" /> 
+        
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"           
+            android:layout_marginTop="33dp"
+            android:layout_marginBottom="8dp"
+             >
+            
+            <Button
+              android:id="@+id/exitBtn_y"
+              android:layout_width="110dp"
+              android:layout_height="wrap_content"
+              android:text="是"
+              android:textSize="19sp"
+              android:textColor="#fff"
+              android:background="@drawable/btn_style_green"
+              android:gravity="center"
+			  android:onClick="exitbutton_y"
+              />
+            
+            <Button
+              android:id="@+id/exitBtn_n"
+              android:layout_width="110dp"
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="10dp"
+              android:text="否"
+              android:textSize="19sp"
+              android:textColor="#333"
+              android:background="@drawable/btn_style_white"
+              android:gravity="center"
+			  android:onClick="exitbutton_n"
+              />
+        </LinearLayout>
+
+    </LinearLayout>
